@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L.E.N. | Документація Discord бота</title>
+    <title>📚 L.E.N. | Документація Discord бота</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
@@ -235,6 +235,13 @@
         </ul>
     </div>
 
+    <!-- Кнопка для переходу до білдера гри -->
+    <div class="flex justify-center mt-8">
+        <a href="builder.html" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+            <i class="fas fa-plus-circle mr-2"></i>Створити датапак для "Своєї Гри"
+        </a>
+    </div>
+
     <main class="p-6 space-y-8">
         <!-- Про бота -->
         <section id="about" class="fade-in">
@@ -272,7 +279,7 @@
                             <i class="fas fa-info-circle text-4xl text-red-600 mb-4"></i>
                             <h4 class="text-xl font-semibold mb-2">Поточна версія</h4>
                             <p class="text-gray-300">
-                                <strong>Версія документації:</strong> <span class="syntax">1.11</span><br>
+                                <strong>Версія:</strong> <span class="syntax">1.11</span><br>
                                 <strong>Останнє оновлення:</strong> <span class="syntax">13.01.2025</span>
                             </p>
                         </div>
@@ -557,6 +564,18 @@
                 </div>
             </div>
 
+            <!-- Команда: голосування -->
+            <div class="card p-4 bg-gradient-to-br from-gray-800 to-gray-900 border border-transparent rounded-lg shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-red-800 to-red-900 opacity-10 animate-gradient"></div>
+                <div class="flex flex-col items-center text-center">
+                    <i class="fas fa-image text-3xl text-red-500 mb-2"></i>
+                    <h3 class="text-xl font-semibold mb-2">Команда: <span class="syntax">голосування</span></h3>
+                    <p class="text-gray-300 text-sm">Створює голосування у вибраному каналі</p>
+                    <p class="text-gray-400 text-xs mt-2"><strong>Синтаксис:</strong> <span class="syntax">лен голосування [час у хвилинах] [\"питання в лапках\"] [варіант 1] [варіант 2] ...</span></p>
+                    <p class="text-gray-400 text-xs mt-4"><strong>Приклад:</strong> <span class="syntax">лен голосування 60 "9 чи 10?" 9 10 8</span></p>
+                </div>
+            </div>
+
             <!-- Команда: збереження -->
             <div class="card p-4 bg-gradient-to-br from-gray-800 to-gray-900 border border-transparent rounded-lg shadow-2xl relative overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-r from-red-800 to-red-900 opacity-10 animate-gradient"></div>
@@ -614,6 +633,28 @@
                 <div class="absolute inset-0 bg-gradient-to-r from-red-800 to-red-900 opacity-10 animate-gradient"></div>
                 <div class="flex flex-col items-center text-center">
                     <i class="fas fa-leaf text-3xl text-red-500 mb-2"></i>
+                    <h3 class="text-xl font-semibold mb-2">Команда: <span class="syntax">квіз</span></h3>
+                    <p class="text-gray-300 text-sm">Гра на відгадування рослин з Plants vs Zombies 2. Аналог гри Isaacle.</p>
+                    <p class="text-gray-400 text-xs mt-2"><strong>Синтаксис:</strong> <span class="syntax">лен квіз</span></p>
+                    <p class="text-gray-400 text-xs mt-4"><strong>Як грати:</strong></p>
+                    <ul class="text-gray-300 text-sm list-disc list-inside mt-2">
+                        <li>Після команди <span class="syntax">лен квіз</span> бот загадує рослину з Plants vs Zombies 2.</li>
+                        <li>Ви вводите свою догадку за допомогою команди <span class="syntax">лен вдь [рослина]</span>.</li>
+                        <li>У вас є 7 спроб і 3 хвилини на відгадування.</li>
+                        <li>Якщо ви вгадаєте рослину, ви виграєте!</li>
+                    </ul>
+                    <p class="text-gray-400 text-xs mt-4"><strong>Додаткові команди:</strong></p>
+                    <ul class="text-gray-300 text-sm list-disc list-inside mt-2">
+                        <li ><span class="syntax">лен рослини</span> — виводить весь список рослин.</li>
+                        <li class="mt-2"><span class="syntax">лен рослина [назва]</span> — виводить всю інформацію про конкретну рослину.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card p-4 bg-gradient-to-br from-gray-800 to-gray-900 border border-transparent rounded-lg shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-red-800 to-red-900 opacity-10 animate-gradient"></div>
+                <div class="flex flex-col items-center text-center">
+                    <i class="fas fa-fire text-3xl text-red-500 mb-2"></i>
                     <h3 class="text-xl font-semibold mb-2">Команда: <span class="syntax">квіз</span></h3>
                     <p class="text-gray-300 text-sm">Гра на відгадування рослин з Plants vs Zombies 2. Аналог гри Isaacle.</p>
                     <p class="text-gray-400 text-xs mt-2"><strong>Синтаксис:</strong> <span class="syntax">лен квіз</span></p>
@@ -759,6 +800,16 @@
                     <p class="text-gray-400 text-xs mt-4"><strong>Приклад:</strong> <span class="syntax">лен 1984 m 5</span></p>
                 </div>
             </div>
+
+            <div class="card p-4 bg-gradient-to-br from-gray-800 to-gray-900 border border-transparent rounded-lg shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-red-800 to-red-900 opacity-10 animate-gradient"></div>
+                <div class="flex flex-col items-center text-center">
+                    <i class="fas fa-question-circle text-3xl text-red-500 mb-2"></i>
+                    <h3 class="text-xl font-semibold mb-2">Команда: <span class="syntax">статистика</span></h3>
+                    <p class="text-gray-300 text-sm">Виводить статистику сервера</p>
+                    <p class="text-gray-400 text-xs mt-2"><strong>Синтаксис:</strong> <span class="syntax">лен статистика</span></p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -791,6 +842,8 @@
                         <li class="mt-2"><strong>емоції</strong> <span class="syntax">0-100</span> (шанс бота поставити реакцію)</li>
                         <li class="mt-2"><strong>відповідь</strong> <span class="syntax">0-100</span> (шанс відповіді бота)</li>
                         <li class="mt-2"><strong>запамят</strong> <span class="syntax">0-100</span> (шанс запам'ятати слова)</li>
+                        <li class="mt-2"><strong>вітальні</strong> <span class="syntax">так|ні</span> (вімк/вимк вітальні повідомлення)</li>
+                        <li class="mt-2"><strong>вітальний_канал</strong> <span class="syntax">[ID каналу]</span> (ID канала для повідомлень)</li>
                     </ul>
                 </div>
             </div>
@@ -1031,7 +1084,7 @@
                 <div class="absolute inset-0 bg-gradient-to-r from-red-800 to-red-900 opacity-10 animate-gradient"></div>
                 <div class="flex flex-col items-center text-center">
                     <i class="fas fa-exclamation-triangle text-3xl text-red-500 mb-2"></i>
-                    <h3 class="text-xl font-semibold mb-2">Команда: <span class="syntax">хорні</span></h3>
+                    <h3 class="text-xl font-semibold mb-2">Команда: <span class="syntax">лен хорні</span></h3>
                     <p class="text-gray-300 text-sm">Walter, put your dick away.</p>
                     <p class="text-gray-400 text-xs mt-2"><strong>Синтаксис:</strong> <span class="syntax">лен хорні <нік></span></p>
                 </div>
